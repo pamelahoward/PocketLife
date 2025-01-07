@@ -1,4 +1,4 @@
-/// @desc Undefined Description
+/// @desc Draw Player
 
 switch(room) {
 	case rm_menu:

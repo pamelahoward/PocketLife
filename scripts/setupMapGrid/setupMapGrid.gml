@@ -15,7 +15,8 @@ function setupMapGrid(){
 	for (var xx=0; xx < room_width; xx++){
 		for(var yy = 0; yy < room_height; yy++){
 		//if (tilemap_get_at_pixel(collisionLayerID, xx, yy)){// I think this is the error
-		if (tilemap_get(collisionLayerID, xx, yy)){// I think this is the error
+		//if (tilemap_get(collisionLayerID, xx, yy)){// I think this is the error
+		if tilemap_get(collisionLayerID, xx, yy){// I think this is the error
 			mp_grid_add_cell(global.collisionGrid, xx, yy);
 			}
 		}
