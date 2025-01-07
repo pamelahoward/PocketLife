@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"setupWeather",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"setupWeather",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
