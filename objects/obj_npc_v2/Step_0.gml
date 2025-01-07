@@ -17,5 +17,5 @@ if point_distance(x,y,obj_player.x,obj_player.y) <= 32 {
 	image_angle = direction;
 }
 
-mp_grid_path(global.grid,path_NPC,x,y,tX,tY,true); //update path to target coords
+mp_grid_path(global.collisionGrid,path_NPC,x,y,tX,tY,true); //update path to target coords
 path_start(path_NPC,walkSpd,path_action_stop,false); //start path

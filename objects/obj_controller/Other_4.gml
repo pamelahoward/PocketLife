@@ -20,7 +20,7 @@ if room == rm_menu {
 }
 
 if room == rm_game {
-	setupMapGrid();
+	//setupMapGrid();
 	
 	//setupWeather();
 	

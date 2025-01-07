@@ -15,7 +15,7 @@ hCol = make_color_hsv(random(255),random(255),random(255));
 path_NPC = path_add();
 tX = random(room_width);
 tY = random(room_height);
-mp_grid_path(global.grid,path_NPC,x,y,tX,tY,true);
+mp_grid_path(global.collisionGrid,path_NPC,x,y,tX,tY,true);
 
 eX = choose(-32,room_width+32); //exit X
 eY = choose(-32,room_height+32); //exit Y
@@ -36,12 +36,12 @@ function gotoIdlePoint() {
 		action = "goto:Idle";
 			
 	}
-	mp_grid_path(global.grid,path_NPC,x,y,tX,tY,true); //update path to target coords
+	mp_grid_path(global.collisionGrid,path_NPC,x,y,tX,tY,true); //update path to target coords
 	path_start(path_NPC,walkSpd,path_action_stop,false); //start path
 }
 
 function leaveWorld() {
-	mp_grid_path(global.grid,path_NPC,x,y,eX,eY,true); //update path to exit coords
+	mp_grid_path(global.collisionGrid,path_NPC,x,y,eX,eY,true); //update path to exit coords
 	path_start(path_NPC,walkSpd,path_action_stop,false); //start path
 	action = "goto:LeaveWorld";
 }

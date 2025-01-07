@@ -92,9 +92,11 @@
     {"name":"spr_lamppost","order":11,"path":"sprites/spr_lamppost/spr_lamppost.yy",},
     {"name":"spr_logo_long","order":12,"path":"sprites/spr_logo_long/spr_logo_long.yy",},
     {"name":"spr_stretch","order":8,"path":"sprites/spr_stretch/spr_stretch.yy",},
+    {"name":"spr_ts_collisions","order":15,"path":"sprites/spr_ts_collisions/spr_ts_collisions.yy",},
     {"name":"spr_ts_exterior","order":2,"path":"sprites/spr_ts_exterior/spr_ts_exterior.yy",},
     {"name":"spr_ts_interior","order":4,"path":"sprites/spr_ts_interior/spr_ts_interior.yy",},
     {"name":"Sprite_GooglePlayServices_SavedGames_dataObj","order":1,"path":"sprites/Sprite_GooglePlayServices_SavedGames_dataObj/Sprite_GooglePlayServices_SavedGames_dataObj.yy",},
+    {"name":"ts_collisions","order":3,"path":"tilesets/ts_collisions/ts_collisions.yy",},
     {"name":"ts_interior","order":2,"path":"tilesets/ts_interior/ts_interior.yy",},
   ],
 }
