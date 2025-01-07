@@ -1,4 +1,4 @@
-/// @desc Undefined Description
+/// @desc Place Player On Map
 
 if rm_game {
 	path_Player = path_add();
