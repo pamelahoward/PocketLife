@@ -66,6 +66,7 @@
     {"name":"obj_idlingPoint_S","order":11,"path":"objects/obj_idlingPoint_S/obj_idlingPoint_S.yy",},
     {"name":"obj_idlingPoint","order":8,"path":"objects/obj_idlingPoint/obj_idlingPoint.yy",},
     {"name":"obj_lamppost","order":9,"path":"objects/obj_lamppost/obj_lamppost.yy",},
+    {"name":"obj_menu_options","order":16,"path":"objects/obj_menu_options/obj_menu_options.yy",},
     {"name":"obj_npc","order":14,"path":"objects/obj_npc/obj_npc.yy",},
     {"name":"path_bike_1","order":5,"path":"paths/path_bike_1/path_bike_1.yy",},
     {"name":"path_bike_2","order":6,"path":"paths/path_bike_2/path_bike_2.yy",},

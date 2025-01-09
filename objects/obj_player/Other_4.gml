@@ -1,6 +1,6 @@
 /// @desc Place Player On Map
 
-if rm_game {
+if room == rm_game {
 	path_Player = path_add();
 	tX = 0;
 	tY = 0;
