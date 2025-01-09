@@ -80,6 +80,7 @@
     {"name":"Room_GooglePlayServices_Leaderboards","order":3,"path":"rooms/Room_GooglePlayServices_Leaderboards/Room_GooglePlayServices_Leaderboards.yy",},
     {"name":"Room_GooglePlayServices_SavedGames","order":5,"path":"rooms/Room_GooglePlayServices_SavedGames/Room_GooglePlayServices_SavedGames.yy",},
     {"name":"createLighting","order":3,"path":"scripts/createLighting/createLighting.yy",},
+    {"name":"debug_text","order":5,"path":"scripts/debug_text/debug_text.yy",},
     {"name":"draw_set_debug","order":1,"path":"scripts/draw_set_debug/draw_set_debug.yy",},
     {"name":"setupMapGrid","order":4,"path":"scripts/setupMapGrid/setupMapGrid.yy",},
     {"name":"setupWeather","order":2,"path":"scripts/setupWeather/setupWeather.yy",},

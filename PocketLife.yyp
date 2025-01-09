@@ -111,6 +111,7 @@
     {"id":{"name":"Room_GooglePlayServices_SavedGames","path":"rooms/Room_GooglePlayServices_SavedGames/Room_GooglePlayServices_SavedGames.yy",},},
     {"id":{"name":"Room_GooglePlayServices","path":"rooms/Room_GooglePlayServices/Room_GooglePlayServices.yy",},},
     {"id":{"name":"createLighting","path":"scripts/createLighting/createLighting.yy",},},
+    {"id":{"name":"debug_text","path":"scripts/debug_text/debug_text.yy",},},
     {"id":{"name":"draw_set_debug","path":"scripts/draw_set_debug/draw_set_debug.yy",},},
     {"id":{"name":"setupMapGrid","path":"scripts/setupMapGrid/setupMapGrid.yy",},},
     {"id":{"name":"setupWeather","path":"scripts/setupWeather/setupWeather.yy",},},

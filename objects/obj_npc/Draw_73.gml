@@ -26,7 +26,7 @@ if global.debugMode == true {
 	draw_set_debug();
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_bottom);
-	draw_text(x,y-(sprite_height/2),"Age: " + string(age) + ", Max Age: " + string(maxAge) + "\nAction: " + action);
+	draw_text(x,y-(sprite_height/2),debug_text());
 	
 	draw_set_color(bCol);
 	draw_path(path_NPC, x, y, true);
