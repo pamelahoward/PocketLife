@@ -91,7 +91,6 @@
     {"id":{"name":"obj_idlingPoint_S","path":"objects/obj_idlingPoint_S/obj_idlingPoint_S.yy",},},
     {"id":{"name":"obj_idlingPoint","path":"objects/obj_idlingPoint/obj_idlingPoint.yy",},},
     {"id":{"name":"obj_lamppost","path":"objects/obj_lamppost/obj_lamppost.yy",},},
-    {"id":{"name":"obj_npc_v2","path":"objects/obj_npc_v2/obj_npc_v2.yy",},},
     {"id":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"ps_Lighting","path":"particles/ps_Lighting/ps_Lighting.yy",},},

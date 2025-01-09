@@ -15,10 +15,8 @@ if room == rm_game {
 	}
 	#endregion
 
-	//if instance_number(obj_npc) < 15 {
-	if instance_number(obj_npc_v2) < 15 {
-		//newNPC = instance_create_layer(random(room_width),random(room_height),"Instances",obj_npc);
-		newNPC = instance_create_layer(random(room_width),random(room_height),"Instances",obj_npc_v2);
+	if instance_number(obj_npc) < 15 {
+		newNPC = instance_create_layer(random(room_width),random(room_height),"Instances",obj_npc);
 		newNPC.age = irandom(65);
 	}
 }
