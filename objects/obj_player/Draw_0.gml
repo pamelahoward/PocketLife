@@ -2,7 +2,7 @@
 
 switch(room) {
 	case rm_menu:
-		var scale = 8;
+		var scale = 4;
 	break;
 	
 	case rm_game:

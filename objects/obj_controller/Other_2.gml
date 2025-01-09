@@ -39,3 +39,12 @@ global.shoutList = ["Watch it!","Back off!","Be careful!","Oi!","@&#$?&!"];
 goldHand = 100;
 goldBank = 0;
 
+var surf;
+surf = surface_create(32, 32);
+surface_set_target(surf);
+draw_clear_alpha(c_black, 0);
+draw_sprite_part(spr_ts_exterior,0,32,0,32,32,0,0);
+spr_BG = sprite_create_from_surface(surf, 0, 0, 32, 32, false, false, 16, 16);
+surface_reset_target();
+surface_free(surf);
+

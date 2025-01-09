@@ -1,6 +1,8 @@
 /// @desc Undefined Description
 
 if room == rm_menu {
+	layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_BG);
+	
 	titleX = 0;
 	titleY = 0;
 	titleW = room_width;
