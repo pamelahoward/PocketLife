@@ -96,6 +96,7 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"ps_Lighting","path":"particles/ps_Lighting/ps_Lighting.yy",},},
     {"id":{"name":"path_bike_1","path":"paths/path_bike_1/path_bike_1.yy",},},
+    {"id":{"name":"path_bike_2","path":"paths/path_bike_2/path_bike_2.yy",},},
     {"id":{"name":"path_bus","path":"paths/path_bus/path_bus.yy",},},
     {"id":{"name":"path_car_1","path":"paths/path_car_1/path_car_1.yy",},},
     {"id":{"name":"path_car_2","path":"paths/path_car_2/path_car_2.yy",},},

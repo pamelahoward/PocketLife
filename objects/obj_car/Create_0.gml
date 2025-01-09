@@ -1,4 +1,4 @@
-/// @desc Undefined Description
+/// @desc Define path, set random colour, start path
 
 carPath = path_car_1;
 

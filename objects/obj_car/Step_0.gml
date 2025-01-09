@@ -1,3 +1,3 @@
-/// @desc Undefined Description
+/// @desc Face path direction
 
 image_angle = direction;
