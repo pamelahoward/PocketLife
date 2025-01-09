@@ -22,7 +22,7 @@ if global.debugMode == true {
 		#endregion
 	}
 	if room == rm_game {
-		// debug only
+		/* debug only
 		#region draw paths
 			draw_set_alpha(1);
 			draw_set_color(c_red);
@@ -37,5 +37,6 @@ if global.debugMode == true {
 			draw_set_color(c_yellow);
 			draw_path(path_bus, x, y, true);
 		#endregion
+		*/
 	}
 }

@@ -1,13 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bus",
+  "%Name":"obj_bike",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bus",
+  "name":"obj_bike",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -32,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_bus",
-    "path":"sprites/spr_bus/spr_bus.yy",
+    "name":"spr_bike",
+    "path":"sprites/spr_bike/spr_bike.yy",
   },
   "spriteMaskId":null,
   "visible":true,

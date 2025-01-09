@@ -8,9 +8,11 @@ global.debugMode = false;
 
 #macro adultAge 18
 
+#macro debugSpd 5
 #macro walkSpd 1
-#macro busSpd 2
 #macro carSpd 3
+#macro busSpd 2
+#macro bikeSpd walkSpd+((busSpd-walkSpd)/2)
 
 //DAY: 15 MINUTES | NIGHT: 5 MINUTES
 //#macro dayLength 60*60*15 //fps * 60 seconds * 15 minutes (day time length)
