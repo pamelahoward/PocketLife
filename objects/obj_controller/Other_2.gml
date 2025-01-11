@@ -15,8 +15,10 @@ global.debugMode = false;
 #macro bikeSpd walkSpd+((busSpd-walkSpd)/2)
 
 //DAY: 15 MINUTES | NIGHT: 5 MINUTES
-//#macro dayLength 60*60*15 //fps * 60 seconds * 15 minutes (day time length)
-//#macro nightLength 60*60*5 //fps * 60 seconds * 5 minutes (night time length)
+//
+#macro dayLength 60*60*15 //fps * 60 seconds * 15 minutes (day time length)
+#macro nightLength 60*60*5 //fps * 60 seconds * 5 minutes (night time length)
+//
 
 //DAY: 1 MINUTES | NIGHT: 0.5 MINUTES
 /*
@@ -25,16 +27,16 @@ global.debugMode = false;
 */
 
 //DAY:	15 SECONDS | NIGHT: 5 SECONDS
-//
+/*
 #macro dayLength 60*15 //fps * 15 seconds (DEBUG day time length)
 #macro nightLength 60*5 //fps * 5 seconds (DEBUG night time length)
-//
+*/
 
 #macro c_night #0d0d33
 
 global.controlMethod = 2; //1 = 4 directional movement, 2 = w/s forward/back a/d turning
 
-global.shoutList = ["Watch it!","Back off!","Be careful!","Oi!","@&#$?&!"];
+global.shoutList = ["Watch it!","Back off!","Be careful!","Oi!","@&#$?&!","Sorry~", "Oops!", "Ooh!", "Ah!"];
 
 goldHand = 100;
 goldBank = 0;

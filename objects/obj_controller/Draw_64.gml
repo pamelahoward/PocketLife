@@ -1,25 +1,11 @@
 /// @desc Draw Menu and GUI
 
-if room == rm_menu {
-	draw_sprite(spr_logo_long,image_index,titleW/2,titleH/2);
-	
-}
-
+/*
 guiX = view_xport[0];
 guiY = view_yport[0];
 guiW = view_wport[0];
 guiH = view_hport[0];
-
-if room == rm_menu {
-	optionsX = playercustomizerW;
-	optionsY = titleH;
-	optionsW = room_width;
-	optionsH = room_height;
-	draw_set_alpha(1);
-	draw_set_color(c_grey);
-	draw_rectangle(optionsX,optionsY,optionsW,optionsH,false);
-}
-
+*/
 
 //draw game info
 if room == rm_game {
@@ -36,6 +22,20 @@ if room == rm_menu {
 	if global.debugMode == true {
 		#region DEBUG draw GUI sections 
 			draw_set_alpha(0.5);
+			draw_set_color(c_grey);
+			draw_rectangle(guiX,guiY,guiW,guiH,false);
+			draw_set_color(c_fuchsia);
+			draw_rectangle(guiX,guiY,guiX+32,guiY+32,false); //top left corner
+			draw_rectangle(guiW,guiY,guiW-32,guiY+32,false); //top right corner
+			draw_rectangle(guiW,guiH,guiW-32,guiH-32,false); //bottom right corner
+			draw_rectangle(guiX,guiH,guiX+32,guiH-32,false); //bottom left corner
+			draw_set_font(fnt_gui);
+			draw_set_halign(fa_center);
+			draw_set_valign(fa_middle);
+			draw_text(guiW/2,guiH/2,"GUI Bounds");
+			
+			//
+			draw_set_alpha(0.5);
 			draw_set_color(c_yellow);
 			draw_rectangle(titleX,titleY,titleW,titleH,false);
 			draw_set_color(c_red);
@@ -48,6 +48,7 @@ if room == rm_menu {
 			draw_set_valign(fa_middle);
 			draw_text(playercustomizerX+(playercustomizerW/2),playercustomizerY+(playercustomizerH/2),"Player Customizer");
 			draw_text(optionsX+((optionsW-optionsX)/2),optionsY+(optionsH/2),"Options");
+			//
 		#endregion
 	}
 }

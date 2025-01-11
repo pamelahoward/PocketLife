@@ -3,22 +3,34 @@
 if room == rm_menu {
 	layer_background_sprite(layer_background_get_id(layer_get_id("Background")), spr_BG);
 	
+	/*
+	guiX = view_xport[0];
+	guiY = view_yport[0];
+	guiW = view_wport[0];
+	guiH = view_hport[0];
+	*/
+	
+	guiX = view_get_xport(0);
+	guiY = view_get_yport(0);
+	guiW = view_get_wport(0);
+	guiH = view_get_hport(0);
+	
 	titleX = 0;
 	titleY = 0;
-	titleW = room_width;
-	titleH = room_height/4;
+	titleW = guiW;
+	titleH = guiH/4;
 	
 	playercustomizerX = 0;
 	playercustomizerY = titleH;
-	playercustomizerW = room_width/2;
-	playercustomizerH = room_height;
+	playercustomizerW = guiW/2;
+	playercustomizerH = guiH;
 	
 	optionsX = playercustomizerW;
 	optionsY = titleH;
-	optionsW = room_width;
-	optionsH = room_height;
+	optionsW = guiW;
+	optionsH = guiH;
 	
-	player = instance_create_layer(playercustomizerX+(playercustomizerW/2),playercustomizerY+(playercustomizerH/2),"Instances",obj_player);
+	//player = instance_create_layer(x+(guiW/2),y+(guiH/2),"Instances",obj_player);
 }
 
 if room == rm_game {
