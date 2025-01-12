@@ -1,12 +1,5 @@
 /// @desc Draw Menu and GUI
 
-/*
-guiX = view_xport[0];
-guiY = view_yport[0];
-guiW = view_wport[0];
-guiH = view_hport[0];
-*/
-
 //draw game info
 if room == rm_game {
 	draw_set_alpha(1);
