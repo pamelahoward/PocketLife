@@ -1,8 +1,8 @@
 /// @desc Setup NPC
 
-action = "goto:Random";
-//alarm[0] = 60*random_range(15,60); //new move target, game fps multiplied by 15-60 seconds
-alarm[0] = 1; //new move target, game fps multiplied by 15-60 seconds
+target = "Random";
+action = "goto:" + target;
+alarm[0] = 1; //thought alarm, think of new target, game fps multiplied by 15-60 seconds
 
 age = 0;
 maxAge = irandom_range(80,95);
@@ -22,26 +22,49 @@ eY = choose(-32,room_height+32); //exit Y
 
 shout = global.shoutList[irandom(array_length(global.shoutList)-1)];
 
-//define actions
-function gotoIdlePoint() {
-	if age < adultAge {
-		var nearest_idlingPoint = instance_nearest(x,y,obj_idlingPoint_S);
-		tX = nearest_idlingPoint.x;
-		tY = nearest_idlingPoint.y;
-		action = "goto:IdleSafe";
-	} else {
-		var nearest_idlingPoint = instance_nearest(x,y,obj_idlingPoint);
-		tX = nearest_idlingPoint.x;
-		tY = nearest_idlingPoint.y;
-		action = "goto:Idle";
-			
+#region define targets and actions
+	function target_Random() {
+		tX = random(room_width);
+		tY = random(room_height);
+		target = "Random";
 	}
-	mp_grid_path(global.collisionGrid,path_NPC,x,y,tX,tY,true); //update path to target coords
-	path_start(path_NPC,walkSpd,path_action_stop,false); //start path
-}
+	
+	function target_IdlePoint() {
+		if age < adultAge {
+			var nearest_idlingPoint = instance_nearest(x,y,obj_idlingPoint_S);
+			tX = nearest_idlingPoint.x;
+			tY = nearest_idlingPoint.y;
+			target = "IdleSafe";
+		} else {
+			var nearest_idlingPoint = instance_nearest(x,y,obj_idlingPoint);
+			tX = nearest_idlingPoint.x;
+			tY = nearest_idlingPoint.y;
+			target = "Idle";
+			
+		}
+	}
 
-function leaveWorld() {
-	mp_grid_path(global.collisionGrid,path_NPC,x,y,eX,eY,true); //update path to exit coords
-	path_start(path_NPC,walkSpd,path_action_stop,false); //start path
-	action = "goto:LeaveWorld";
-}
+	function target_Friend() {
+		// currently broken, meant to find a friend, if can't find friend idle instead, walk to friend if one found
+		friend = instance_nearest(x,y,obj_npc);
+		
+		/*
+		if friend == noone { //can't find a friend
+			show_debug_message(string(id) + " couldn't find a friend!");
+			target_IdlePoint(); //idle instead	
+		} else { //found a friend nearby!
+		*/
+			tX = friend.x;
+			tY = friend.y;
+			show_debug_message(string(id) + " found a friend at:" + string(tX) + "," + string(tY));
+		//}
+		target = "Friend";
+	}
+
+	function target_leaveMap() {
+		//bottom right footpath (improve this targetting later)
+		tX = 2032;
+		tY = 2128;
+		target = "LeaveMap";
+	}
+#endregion

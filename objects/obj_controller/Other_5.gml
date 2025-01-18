@@ -1,7 +1,7 @@
-/// @desc Undefined Description
+/// @desc Cleanup Weather System
 
 if room == rm_game {
-	part_type_destroy(global.pt_bulb);
+	//part_type_destroy(global.pt_bulb);
 	//part_emitter_destroy(global.P_System, global.Particle1_Emitter); //how to destroy an emitter
-	part_system_destroy(global.ps_Lighting);
+	//part_system_destroy(global.ps_Lighting);
 }

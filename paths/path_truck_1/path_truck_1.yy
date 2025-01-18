@@ -1,0 +1,26 @@
+{
+  "$GMPath":"",
+  "%Name":"path_truck_1",
+  "closed":true,
+  "kind":0,
+  "name":"path_truck_1",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":-32.0,"y":1008.0,},
+    {"speed":100.0,"x":304.0,"y":1008.0,},
+    {"speed":100.0,"x":304.0,"y":1840.0,},
+    {"speed":100.0,"x":752.0,"y":1840.0,},
+    {"speed":100.0,"x":752.0,"y":2336.0,},
+    {"speed":100.0,"x":784.0,"y":2336.0,},
+    {"speed":100.0,"x":784.0,"y":1808.0,},
+    {"speed":100.0,"x":336.0,"y":1808.0,},
+    {"speed":100.0,"x":336.0,"y":976.0,},
+    {"speed":100.0,"x":-32.0,"y":976.0,},
+  ],
+  "precision":8,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"limitBounds",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"limitBounds",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

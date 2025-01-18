@@ -1,14 +1,20 @@
 /// @desc Draw Menu and GUI
 
+
+
 //draw game info
 if room == rm_game {
+	//draw settings button
+	draw_sprite(spr_button,0,16,16);
+	
+	//draw gold and time left
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	draw_set_font(fnt_gui);
 	draw_set_halign(fa_left);
-	draw_set_valign(fa_top);
-	draw_text(guiX+16,guiY+16,"Gold on hand: " + string(goldHand) + ", (in bank: " + string(goldBank) + ")");
-	draw_text(guiX+16,guiY+48 /* make this more scaleable later */,string_capitalize(timeofday) + " time left: " + string(alarm[1]));
+	draw_set_valign(fa_bottom);
+	draw_text(guiX+16,guiH-16,"Gold on hand: " + string(goldHand) + ", (in bank: " + string(goldBank) + ")" + "\nFood: " + string(food));
+	draw_text(guiX+16,guiH-64 /* make this more scaleable later */,string_capitalize(timeofday) + " time left: " + string(alarm[1]));
 }
 
 if room == rm_menu {

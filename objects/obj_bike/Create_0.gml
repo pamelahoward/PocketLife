@@ -1,5 +1,7 @@
 /// @desc Undefined Description
 
+parked = false;
+
 bikePath = path_bike_1;
 
 //bike colours
@@ -12,3 +14,5 @@ hCol = make_color_hsv(random(255),random(255),random(255));
 rScale = random_range(0.5,1);
 
 path_start(bikePath,bikeSpd,path_action_continue,true);
+
+shout = global.shoutList[irandom(array_length(global.shoutList)-1)];

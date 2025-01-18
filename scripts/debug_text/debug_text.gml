@@ -11,15 +11,9 @@ function debug_text(){
 		break;
 		
 		case "obj_car":
-			return string(floor(path_get_speed(carPath, path_position)));
-		break;
-		
 		case "obj_bus":
-			return string(floor(path_get_speed(path_bus, path_position)));
-		break;
-		
 		case "obj_bike":
-			return string(floor(path_get_speed(bikePath, path_position)));
+			return string(path_speed*100);
 		break;
 		
 		default:

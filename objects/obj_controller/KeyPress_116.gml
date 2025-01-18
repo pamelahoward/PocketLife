@@ -1,4 +1,4 @@
-/// @desc DEBUG Mode Toggle
+/// @desc DEBUG Mode Toggle (Windows)
 
 switch (global.debugMode) {
 	case true:

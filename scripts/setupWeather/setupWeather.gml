@@ -8,7 +8,7 @@ function setupWeather(){
 	fx_set_parameter(global.clouds, "g_FractalNoisePersistence", 0.25);
 	fx_set_parameter(global.clouds, "g_FractalNoiseOffset", [0,0]);
 	fx_set_parameter(global.clouds, "g_FractalNoiseSpeed", 0.25);
-	fx_set_parameter(global.clouds, "g_FractalNoiseTintColour", [255, 255, 255, 0.1]); //[red, green, blue, alpha]
+	fx_set_parameter(global.clouds, "g_FractalNoiseTintColour", [64, 64, 64, 0.01]); //[red, green, blue, alpha]
 	fx_set_parameter(global.clouds, "g_FractalNoiseTexture", NoiseTexture);
 	layer_set_fx("Weather_Clouds", global.clouds);
 }
