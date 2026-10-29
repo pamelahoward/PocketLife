@@ -1,0 +1,18 @@
+[gd_resource type="TileSet" format=3 uid="uid://cg2bp3m4f78dg"]
+
+[ext_resource type="Texture2D" uid="uid://dnxl16cnkqsgn" path="res://sprites/spr_ts_paint/15f7faa0-cefb-4f8d-85fb-dfeda94aecfe.png" id="1_33jyx"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_33jyx"]
+tile_data = PackedInt32Array(0, 131072, 1610612736, 65536, 131072, 1610612736, 1, 131072, 1342177280, 65537, 131072, 1342177280)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ulggg"]
+resource_name = "Paint"
+texture = ExtResource("1_33jyx")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+4:7/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_ulggg")
+pattern_0 = SubResource("TileMapPattern_33jyx")

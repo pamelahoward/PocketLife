@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" format=3 uid="uid://v81ro77gi1em"]
+
+[ext_resource type="Texture2D" uid="uid://d3e06cu1dvnco" path="res://sprites/spr_ts_interior/15f7faa0-cefb-4f8d-85fb-dfeda94aecfe.png" id="1_5dmrn"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a2sft"]
+resource_name = "Interior"
+texture = ExtResource("1_5dmrn")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:3/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_a2sft")
