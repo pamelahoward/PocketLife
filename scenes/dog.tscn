@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b5048ra4i00up"]
+
+[ext_resource type="Script" uid="uid://beq4jnknraxqn" path="res://scripts/dog.gd" id="1_tpbal"]
+[ext_resource type="Texture2D" uid="uid://myy5ghrj1bna" path="res://sprites/spr_dog/dogTail.png" id="2_iaoh4"]
+[ext_resource type="Texture2D" uid="uid://uiid5ia5hscu" path="res://sprites/spr_dog/dogBody.png" id="3_i2xh6"]
+[ext_resource type="Texture2D" uid="uid://d26yvc5uyql4v" path="res://sprites/spr_dog/dogHead.png" id="4_laypt"]
+[ext_resource type="Texture2D" uid="uid://bt1wnhjmejbav" path="res://sprites/spr_dog/dogSpots.png" id="5_ei5el"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
+radius = 16.0
+
+[node name="Dog" type="CharacterBody2D" unique_id=1913736434]
+motion_mode = 1
+script = ExtResource("1_tpbal")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1386677373]
+
+[node name="Tail" type="Sprite2D" parent="Sprite" unique_id=1717120141]
+texture = ExtResource("2_iaoh4")
+
+[node name="Body" type="Sprite2D" parent="Sprite" unique_id=517145373]
+texture = ExtResource("3_i2xh6")
+
+[node name="Head" type="Sprite2D" parent="Sprite" unique_id=942247810]
+texture = ExtResource("4_laypt")
+
+[node name="Spots" type="Sprite2D" parent="Sprite" unique_id=461895736]
+texture = ExtResource("5_ei5el")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116205352]
+shape = SubResource("CircleShape2D_8mwwx")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
+target_position = Vector2(32, 0)

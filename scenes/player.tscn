@@ -8,7 +8,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
 radius = 12.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1913736434]
+[node name="Player" type="CharacterBody2D" unique_id=1913736434 groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_dqkch")
 bodyColor = Color(0.9605107, 0.88714474, 0.85411155, 1)

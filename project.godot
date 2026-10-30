@@ -16,6 +16,10 @@ run/main_scene="uid://ohftdcwx68ns"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalResources="*uid://b3a0jxk5d58gj"
+
 [display]
 
 window/size/viewport_width=1920
@@ -28,6 +32,10 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/ridiculous_coding/plugin.cfg")
+
+[global_group]
+
+Player=""
 
 [input]
 

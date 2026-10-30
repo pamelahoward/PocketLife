@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://biex6nwcdp1a5"]
+
+[ext_resource type="Script" uid="uid://dgiy6fufhe3qh" path="res://scripts/lil.gd" id="1_owo7b"]
+[ext_resource type="Texture2D" uid="uid://c6f3wrg3yjg32" path="res://sprites/spr_lil/lilBody.png" id="2_lhrsw"]
+[ext_resource type="Texture2D" uid="uid://bws4goitb2kyh" path="res://sprites/spr_lil/lilClothes.png" id="3_k7ggn"]
+[ext_resource type="Texture2D" uid="uid://dekhfxq362vhx" path="res://sprites/spr_lil/lilHair.png" id="4_w4x4u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
+radius = 12.0
+
+[node name="Lil" type="CharacterBody2D" unique_id=1913736434]
+motion_mode = 1
+script = ExtResource("1_owo7b")
+
+[node name="Sprite" type="Node2D" parent="." unique_id=1386677373]
+
+[node name="Body" type="Sprite2D" parent="Sprite" unique_id=517145373]
+texture = ExtResource("2_lhrsw")
+
+[node name="Clothes" type="Sprite2D" parent="Sprite" unique_id=1717120141]
+texture = ExtResource("3_k7ggn")
+
+[node name="Hair" type="Sprite2D" parent="Sprite" unique_id=942247810]
+texture = ExtResource("4_w4x4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116205352]
+shape = SubResource("CircleShape2D_8mwwx")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
+target_position = Vector2(32, 0)

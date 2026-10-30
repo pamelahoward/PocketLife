@@ -5,6 +5,8 @@
 [ext_resource type="TileSet" uid="uid://v81ro77gi1em" path="res://tilesets/interior.tres" id="3_lnu2h"]
 [ext_resource type="TileSet" uid="uid://04viay1eyqwl" path="res://tilesets/collisions.tres" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bu5qqfyv3ctbw" path="res://scenes/player.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://b5048ra4i00up" path="res://scenes/dog.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://biex6nwcdp1a5" path="res://scenes/lil.tscn" id="7_u5sy4"]
 
 [node name="Game" type="Node2D" unique_id=1314658621]
 
@@ -28,3 +30,62 @@ tile_set = ExtResource("4_lbhrr")
 
 [node name="Player" parent="." unique_id=1913736434 instance=ExtResource("5_iywne")]
 position = Vector2(144, 144)
+
+[node name="Dog" parent="." unique_id=748022165 instance=ExtResource("6_p57ef")]
+position = Vector2(955, 1159)
+tailColor = Color(0.36545616, 0.24328184, 0.207205, 1)
+bodyColor = Color(0.6424408, 0.47568887, 0.43497688, 1)
+headColor = Color(0.6424408, 0.47568887, 0.43497688, 1)
+spotsColor = Color(0.24345902, 0.17163056, 0.14768851, 1)
+
+[node name="Lil" parent="." unique_id=2139649611 instance=ExtResource("7_u5sy4")]
+position = Vector2(98, 380)
+
+[node name="Lil2" parent="." unique_id=1728972651 instance=ExtResource("7_u5sy4")]
+position = Vector2(140, 399)
+
+[node name="Lil3" parent="." unique_id=1915590941 instance=ExtResource("7_u5sy4")]
+position = Vector2(186, 375)
+
+[node name="Lil4" parent="." unique_id=640575488 instance=ExtResource("7_u5sy4")]
+position = Vector2(222, 406)
+
+[node name="Lil5" parent="." unique_id=166317019 instance=ExtResource("7_u5sy4")]
+position = Vector2(79, 427)
+
+[node name="Lil6" parent="." unique_id=368977702 instance=ExtResource("7_u5sy4")]
+position = Vector2(121, 446)
+
+[node name="Lil7" parent="." unique_id=1022769204 instance=ExtResource("7_u5sy4")]
+position = Vector2(172, 419)
+
+[node name="Lil8" parent="." unique_id=729495532 instance=ExtResource("7_u5sy4")]
+position = Vector2(168, 487)
+
+[node name="Lil9" parent="." unique_id=1278348539 instance=ExtResource("7_u5sy4")]
+position = Vector2(108, 410)
+
+[node name="JohnLil" parent="." unique_id=1749083602 instance=ExtResource("7_u5sy4")]
+position = Vector2(150, 429)
+lilScale = 0.9
+bodyColor = Color(0.86340475, 0.6903159, 0.66590303, 1)
+clothesColor = Color(0.8040702, 0.2500762, 0.2583793, 1)
+hairColor = Color(0.29719996, 0.19572163, 0.15023148, 1)
+
+[node name="Lil11" parent="." unique_id=1748364166 instance=ExtResource("7_u5sy4")]
+position = Vector2(196, 405)
+
+[node name="Lil12" parent="." unique_id=1693285140 instance=ExtResource("7_u5sy4")]
+position = Vector2(215, 443)
+
+[node name="Lil13" parent="." unique_id=1527542775 instance=ExtResource("7_u5sy4")]
+position = Vector2(89, 457)
+
+[node name="Lil14" parent="." unique_id=294360841 instance=ExtResource("7_u5sy4")]
+position = Vector2(131, 476)
+
+[node name="Lil15" parent="." unique_id=1012970129 instance=ExtResource("7_u5sy4")]
+position = Vector2(177, 452)
+
+[node name="Lil16" parent="." unique_id=1004854199 instance=ExtResource("7_u5sy4")]
+position = Vector2(196, 490)
