@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bu5qqfyv3ctbw" path="res://scenes/player.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://b5048ra4i00up" path="res://scenes/dog.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://biex6nwcdp1a5" path="res://scenes/lil.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://bj2qsks08pgu4" path="res://scenes/sign.tscn" id="8_gee14"]
 
 [node name="Game" type="Node2D" unique_id=1314658621]
 
@@ -89,3 +90,11 @@ position = Vector2(177, 452)
 
 [node name="Lil16" parent="." unique_id=1004854199 instance=ExtResource("7_u5sy4")]
 position = Vector2(196, 490)
+
+[node name="Sign" parent="." unique_id=1936744707 instance=ExtResource("8_gee14")]
+position = Vector2(1104, 1551)
+signString = "Supermarket"
+
+[node name="Sign2" parent="." unique_id=1354482743 instance=ExtResource("8_gee14")]
+position = Vector2(1136, 1871)
+signString = "Supermarket"
