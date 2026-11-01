@@ -6,7 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dekhfxq362vhx" path="res://sprites/spr_lil/lilHair.png" id="4_w4x4u"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
-radius = 12.0
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vtaks"]
+radius = 64.0
 
 [node name="Lil" type="CharacterBody2D" unique_id=1913736434]
 input_pickable = true
@@ -29,3 +32,12 @@ shape = SubResource("CircleShape2D_8mwwx")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
 target_position = Vector2(32, 0)
+
+[node name="PerceptionArea2D" type="Area2D" parent="." unique_id=1965243143]
+
+[node name="PerceptionShape2D" type="CollisionShape2D" parent="PerceptionArea2D" unique_id=239064696]
+position = Vector2(52, 0)
+shape = SubResource("CircleShape2D_vtaks")
+
+[connection signal="body_entered" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_entered"]
+[connection signal="body_exited" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_exited"]

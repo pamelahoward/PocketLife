@@ -2,6 +2,10 @@ class_name Lil
 extends CharacterBody2D
 
 @onready var player : Player = get_tree().get_first_node_in_group("Player")
+#var perceivedPlayer : bool = false
+@onready var game : Node2D = get_tree().get_first_node_in_group("Game")
+#@onready var navMap = game.collisionTileMap.get_navigation_map()
+
 
 const SPEED : int = 2000
 
@@ -24,7 +28,9 @@ func _ready() -> void:
 		update_visuals()
 
 func _physics_process(_delta: float) -> void:
-	look_at(player.global_position)
+	if $PerceptionArea2D.overlaps_body(player):		
+		if randi_range(1,100) == 1:
+			look_at(player.global_position)
 	
 	#TODO: movement behaviour here
 
@@ -50,3 +56,11 @@ func is_default_visuals() -> bool:
 		return true
 	else:
 		return false
+
+
+func _on_perception_area_2d_body_entered(body: Node2D) -> void:
+	print("Perceived " + body.name)
+
+
+func _on_perception_area_2d_body_exited(body: Node2D) -> void:
+	print("Stopped perceiving " + body.name)

@@ -1,12 +1,10 @@
 - Main Menu
 	- Animated Title
 	- Customize Avatar
-	- Buttons "New Game" "Continue" "Statistics" "Options" "Quit"
 	
 - Game Screen
-	- Recreate and IMPROVE player movement
 	- Recreate NPC movement and behaviour
-	- Create vehicle paths
+	- Create vehicle paths and behaviour
 	- Flower particles
 	- Time of Day
 	- Gold spawning and collection

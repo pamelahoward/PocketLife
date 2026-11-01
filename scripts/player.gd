@@ -22,10 +22,11 @@ func _physics_process(delta: float) -> void:
 	
 	if enabled:
 		if Input.is_action_pressed("sprint"):
-			speed = defaultSpeed * 2.5
+			speed = defaultSpeed * 3
 		else:
 			speed = defaultSpeed
 		
+		#TODO: add move_backwards code
 		if Input.is_action_pressed("move_forward"):
 			var dir : Vector2 = get_global_mouse_position() - position
 			dir = dir.normalized()

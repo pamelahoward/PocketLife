@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dekhfxq362vhx" path="res://sprites/spr_lil/lilHair.png" id="3_qlg0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
-radius = 12.0
+radius = 8.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1913736434 groups=["Player"]]
 motion_mode = 1
