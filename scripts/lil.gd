@@ -3,8 +3,7 @@ extends CharacterBody2D
 
 @onready var player : Player = get_tree().get_first_node_in_group("Player")
 
-#const defaultSpeed : int = 2000
-#var speed : int = defaultSpeed
+const SPEED : int = 2000
 
 @export_range(0.5, 1.0, 0.05) var lilScale : float = 1.0
 
@@ -15,6 +14,8 @@ extends CharacterBody2D
 @onready var body : Sprite2D = $Sprite/Body
 @onready var clothes : Sprite2D = $Sprite/Clothes
 @onready var hair : Sprite2D = $Sprite/Hair
+
+var target_position : Vector2 = Vector2.ZERO
 
 func _ready() -> void:
 	if is_default_visuals():
@@ -37,12 +38,12 @@ func update_visuals() -> void:
 	scale = Vector2.ONE * lilScale
 	
 func randomize_visuals() -> void:
-	body.modulate = GlobalResources.bodyColors.pick_random()
-	clothes.modulate = Color.from_hsv(randf_range(0.0,1.0), randf_range(0.1,0.9), randf_range(0.1,0.9))
-	hair.modulate = GlobalResources.hairColors.pick_random()
+	bodyColor = GlobalResources.bodyColors.pick_random()
+	clothesColor = Color.from_hsv(randf_range(0.0,1.0), randf_range(0.1,0.9), randf_range(0.1,0.9))
+	hairColor = GlobalResources.hairColors.pick_random()
 	
 	lilScale = randf_range(0.5, 1.0)
-	scale = Vector2.ONE * lilScale
+	update_visuals()
 
 func is_default_visuals() -> bool:
 	if lilScale == 1.0 and bodyColor == Color.WHITE and clothesColor == Color.WHITE and hairColor == Color.WHITE:

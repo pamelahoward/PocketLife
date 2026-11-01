@@ -18,7 +18,6 @@ shape = SubResource("CircleShape2D_pbex8")
 texture = ExtResource("1_shbub")
 
 [node name="Label" type="Label" parent="." unique_id=421489089]
-visible = false
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
@@ -31,6 +30,7 @@ offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("3_8yyji")
+theme_type_variation = &"SignLabel"
 text = "Sign"
 horizontal_alignment = 1
 vertical_alignment = 1

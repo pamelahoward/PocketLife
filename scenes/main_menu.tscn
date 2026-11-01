@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://bbd3cf8ymer3o"]
+
+[ext_resource type="Theme" uid="uid://bmlc4hy7e5suu" path="res://themes/game.tres" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://c0ixfxq8uxqt2" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://bu5qqfyv3ctbw" path="res://scenes/player.tscn" id="2_ekxnf"]
+
+[node name="MainMenu" type="MarginContainer" unique_id=2115753840]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bqqt6")
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+script = ExtResource("1_l6cm7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=957462966]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=460082253]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_type_variation = &"TitleLabel"
+text = "POCKETLIFE"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1735564560]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CustomizeControls" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=54178485]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=535186354]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Player" parent="VBoxContainer/HBoxContainer/CustomizeControls/CenterContainer" unique_id=1913736434 instance=ExtResource("2_ekxnf")]
+unique_name_in_owner = true
+scale = Vector2(5, 5)
+
+[node name="RandomizeButton" type="Button" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=86502003]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Randomize"
+
+[node name="MenuButtons" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=67971752]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+
+[node name="NewGameButton" type="Button" parent="VBoxContainer/HBoxContainer/MenuButtons" unique_id=877350400]
+layout_mode = 2
+text = "New Game"
+
+[node name="ContinueButton" type="Button" parent="VBoxContainer/HBoxContainer/MenuButtons" unique_id=1292446433]
+layout_mode = 2
+disabled = true
+text = "Continue"
+
+[node name="StatisticsButton" type="Button" parent="VBoxContainer/HBoxContainer/MenuButtons" unique_id=2131759845]
+layout_mode = 2
+disabled = true
+text = "Statistics"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer/HBoxContainer/MenuButtons" unique_id=23245633]
+layout_mode = 2
+disabled = true
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/HBoxContainer/MenuButtons" unique_id=1404803745]
+layout_mode = 2
+text = "Quit"
+
+[node name="Version" type="Label" parent="." unique_id=1577731218]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "v1.0.0.0"
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CustomizeControls/RandomizeButton" to="." method="_on_randomize_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MenuButtons/NewGameButton" to="." method="_on_new_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]

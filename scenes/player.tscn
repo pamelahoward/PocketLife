@@ -29,8 +29,5 @@ texture = ExtResource("3_qlg0r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116205352]
 shape = SubResource("CircleShape2D_8mwwx")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=740543634]
-zoom = Vector2(3.75, 3.75)
-
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
 target_position = Vector2(32, 0)

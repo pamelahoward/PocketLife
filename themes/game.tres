@@ -1,12 +1,24 @@
 [gd_resource type="Theme" format=3 uid="uid://bmlc4hy7e5suu"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kkvke"]
+[ext_resource type="FontFile" uid="uid://1li2qm83pr0w" path="res://fonts/dogicapixel.ttf" id="1_l3b0n"]
+[ext_resource type="FontFile" uid="uid://cud2pf4ouuqhn" path="res://fonts/Glossy Sheen Shine.ttf" id="2_t4v3v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8yyji"]
+bg_color = Color(0.6, 0.6, 0.6, 0.49803922)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6tgry"]
+
 [resource]
-Label/colors/font_color = Color(0, 0, 0, 1)
-Label/font_sizes/font_size = 8
-Label/styles/normal = SubResource("StyleBoxFlat_kkvke")
+Label/fonts/font = ExtResource("1_l3b0n")
+SignLabel/base_type = &"Label"
+SignLabel/colors/font_color = Color(0, 0, 0, 1)
+SignLabel/font_sizes/font_size = 8
+SignLabel/styles/normal = SubResource("StyleBoxFlat_8yyji")
+TitleLabel/base_type = &"Label"
+TitleLabel/font_sizes/font_size = 256
+TitleLabel/fonts/font = ExtResource("2_t4v3v")
+TitleLabel/styles/normal = SubResource("StyleBoxEmpty_6tgry")

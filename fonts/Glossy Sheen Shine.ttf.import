@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://1li2qm83pr0w"
-path="res://.godot/imported/dogicapixel.ttf-bd2aa7224c66bc9c9dee588f7d6e2b63.fontdata"
+uid="uid://cud2pf4ouuqhn"
+path="res://.godot/imported/Glossy Sheen Shine.ttf-5bae2ef8e8eb65f86be501f5efab5544.fontdata"
 
 [deps]
 
-source_file="res://fonts/fnt_default/dogicapixel.ttf"
-dest_files=["res://.godot/imported/dogicapixel.ttf-bd2aa7224c66bc9c9dee588f7d6e2b63.fontdata"]
+source_file="res://fonts/Glossy Sheen Shine.ttf"
+dest_files=["res://.godot/imported/Glossy Sheen Shine.ttf-5bae2ef8e8eb65f86be501f5efab5544.fontdata"]
 
 [params]
 
