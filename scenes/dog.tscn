@@ -9,6 +9,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
 radius = 16.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_tpbal"]
+radius = 128.0
+
 [node name="Dog" type="CharacterBody2D" unique_id=1913736434]
 motion_mode = 1
 script = ExtResource("1_tpbal")
@@ -32,3 +35,12 @@ shape = SubResource("CircleShape2D_8mwwx")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
 target_position = Vector2(32, 0)
+
+[node name="PerceptionArea2D" type="Area2D" parent="." unique_id=1592550545]
+
+[node name="PerceptionShape2D" type="CollisionShape2D" parent="PerceptionArea2D" unique_id=1680376964]
+position = Vector2(80, -3)
+shape = SubResource("CircleShape2D_tpbal")
+
+[connection signal="body_entered" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_entered"]
+[connection signal="body_exited" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_exited"]

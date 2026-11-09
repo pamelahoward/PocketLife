@@ -58,66 +58,113 @@ shape = SubResource("RectangleShape2D_pbex8")
 unique_name_in_owner = true
 position = Vector2(144, 144)
 
-[node name="Dog" parent="." unique_id=748022165 instance=ExtResource("6_p57ef")]
+[node name="NPCs" type="Node2D" parent="." unique_id=630831828]
+
+[node name="Dog" parent="NPCs" unique_id=748022165 instance=ExtResource("6_p57ef")]
 position = Vector2(875, 1254)
 tailColor = Color(0.36545616, 0.24328184, 0.207205, 1)
 bodyColor = Color(0.6424408, 0.47568887, 0.43497688, 1)
 headColor = Color(0.6424408, 0.47568887, 0.43497688, 1)
 spotsColor = Color(0.24345902, 0.17163056, 0.14768851, 1)
 
-[node name="Lil" parent="." unique_id=2139649611 instance=ExtResource("7_u5sy4")]
-position = Vector2(795, 1169)
+[node name="Lil" parent="NPCs" unique_id=2139649611 instance=ExtResource("7_u5sy4")]
+position = Vector2(163, 1129)
 
-[node name="Lil2" parent="." unique_id=1728972651 instance=ExtResource("7_u5sy4")]
-position = Vector2(851, 1189)
+[node name="Lil2" parent="NPCs" unique_id=1728972651 instance=ExtResource("7_u5sy4")]
+position = Vector2(1435, 1205)
 
-[node name="Lil3" parent="." unique_id=1915590941 instance=ExtResource("7_u5sy4")]
+[node name="Lil3" parent="NPCs" unique_id=1915590941 instance=ExtResource("7_u5sy4")]
 position = Vector2(922, 1155)
 
-[node name="Lil4" parent="." unique_id=640575488 instance=ExtResource("7_u5sy4")]
+[node name="Lil4" parent="NPCs" unique_id=640575488 instance=ExtResource("7_u5sy4")]
 position = Vector2(958, 1186)
 
-[node name="Lil5" parent="." unique_id=166317019 instance=ExtResource("7_u5sy4")]
+[node name="Lil5" parent="NPCs" unique_id=166317019 instance=ExtResource("7_u5sy4")]
 position = Vector2(773, 1230)
 
-[node name="Lil6" parent="." unique_id=368977702 instance=ExtResource("7_u5sy4")]
-position = Vector2(815, 1249)
+[node name="Lil6" parent="NPCs" unique_id=368977702 instance=ExtResource("7_u5sy4")]
+position = Vector2(703, 1465)
 
-[node name="Lil7" parent="." unique_id=1022769204 instance=ExtResource("7_u5sy4")]
+[node name="Lil7" parent="NPCs" unique_id=1022769204 instance=ExtResource("7_u5sy4")]
 position = Vector2(908, 1199)
 
-[node name="Lil8" parent="." unique_id=729495532 instance=ExtResource("7_u5sy4")]
+[node name="Lil8" parent="NPCs" unique_id=729495532 instance=ExtResource("7_u5sy4")]
 position = Vector2(862, 1290)
 
-[node name="Lil9" parent="." unique_id=1278348539 instance=ExtResource("7_u5sy4")]
+[node name="Lil9" parent="NPCs" unique_id=1278348539 instance=ExtResource("7_u5sy4")]
 position = Vector2(805, 1199)
 
-[node name="JohnLil" parent="." unique_id=1749083602 instance=ExtResource("7_u5sy4")]
+[node name="JohnLil" parent="NPCs" unique_id=1749083602 instance=ExtResource("7_u5sy4")]
 position = Vector2(844, 1232)
 lilScale = 0.9
 bodyColor = Color(0.86340475, 0.6903159, 0.66590303, 1)
 clothesColor = Color(0.8040702, 0.2500762, 0.2583793, 1)
 hairColor = Color(0.29719996, 0.19572163, 0.15023148, 1)
 
-[node name="Lil11" parent="." unique_id=1748364166 instance=ExtResource("7_u5sy4")]
+[node name="Lil11" parent="NPCs" unique_id=1748364166 instance=ExtResource("7_u5sy4")]
 position = Vector2(932, 1185)
 
-[node name="Lil12" parent="." unique_id=1693285140 instance=ExtResource("7_u5sy4")]
-position = Vector2(948, 1237)
+[node name="Lil12" parent="NPCs" unique_id=1693285140 instance=ExtResource("7_u5sy4")]
+position = Vector2(1276, 1341)
 
-[node name="Lil13" parent="." unique_id=1527542775 instance=ExtResource("7_u5sy4")]
+[node name="Lil13" parent="NPCs" unique_id=1527542775 instance=ExtResource("7_u5sy4")]
 position = Vector2(783, 1260)
 
-[node name="Lil14" parent="." unique_id=294360841 instance=ExtResource("7_u5sy4")]
+[node name="Lil14" parent="NPCs" unique_id=294360841 instance=ExtResource("7_u5sy4")]
 position = Vector2(825, 1279)
 
-[node name="Lil15" parent="." unique_id=1012970129 instance=ExtResource("7_u5sy4")]
+[node name="Lil15" parent="NPCs" unique_id=1012970129 instance=ExtResource("7_u5sy4")]
 position = Vector2(910, 1246)
 
-[node name="Lil16" parent="." unique_id=1004854199 instance=ExtResource("7_u5sy4")]
+[node name="Lil16" parent="NPCs" unique_id=1004854199 instance=ExtResource("7_u5sy4")]
 position = Vector2(890, 1293)
 
-[node name="AlyxMoons" parent="." unique_id=1176704396 instance=ExtResource("7_u5sy4")]
+[node name="Lil17" parent="NPCs" unique_id=534245000 instance=ExtResource("7_u5sy4")]
+position = Vector2(224, 489)
+
+[node name="Lil21" parent="NPCs" unique_id=1884866087 instance=ExtResource("7_u5sy4")]
+position = Vector2(88, 561)
+
+[node name="Lil22" parent="NPCs" unique_id=313738192 instance=ExtResource("7_u5sy4")]
+position = Vector2(664, 561)
+
+[node name="Lil23" parent="NPCs" unique_id=458467659 instance=ExtResource("7_u5sy4")]
+position = Vector2(624, 809)
+
+[node name="Lil24" parent="NPCs" unique_id=1281656932 instance=ExtResource("7_u5sy4")]
+position = Vector2(704, 209)
+
+[node name="Lil25" parent="NPCs" unique_id=8960442 instance=ExtResource("7_u5sy4")]
+position = Vector2(928, 449)
+
+[node name="Lil18" parent="NPCs" unique_id=1316188610 instance=ExtResource("7_u5sy4")]
+position = Vector2(1713, 377)
+
+[node name="Lil26" parent="NPCs" unique_id=1427755915 instance=ExtResource("7_u5sy4")]
+position = Vector2(1345, 505)
+
+[node name="Lil27" parent="NPCs" unique_id=2052813043 instance=ExtResource("7_u5sy4")]
+position = Vector2(1561, 777)
+
+[node name="Lil19" parent="NPCs" unique_id=1665474438 instance=ExtResource("7_u5sy4")]
+position = Vector2(1609, 1921)
+
+[node name="Lil28" parent="NPCs" unique_id=944422861 instance=ExtResource("7_u5sy4")]
+position = Vector2(1913, 2193)
+
+[node name="Lil29" parent="NPCs" unique_id=675800198 instance=ExtResource("7_u5sy4")]
+position = Vector2(1233, 2017)
+
+[node name="Lil20" parent="NPCs" unique_id=1759460962 instance=ExtResource("7_u5sy4")]
+position = Vector2(833, 2321)
+
+[node name="Lil30" parent="NPCs" unique_id=1639464655 instance=ExtResource("7_u5sy4")]
+position = Vector2(321, 2449)
+
+[node name="Lil31" parent="NPCs" unique_id=1401625429 instance=ExtResource("7_u5sy4")]
+position = Vector2(977, 2769)
+
+[node name="AlyxMoons" parent="NPCs" unique_id=1176704396 instance=ExtResource("7_u5sy4")]
 position = Vector2(412, 187.99997)
 rotation = 2.4771247
 bodyColor = Color(0.972549, 0.9254902, 0.9019608, 1)

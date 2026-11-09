@@ -11,23 +11,33 @@ extends CharacterBody2D
 @export var headColor : Color = Color.WHITE
 @export var spotsColor : Color = Color.WHITE
 
-@onready var tail : Sprite2D = $Sprite/Tail
-@onready var body : Sprite2D = $Sprite/Body
-@onready var head : Sprite2D = $Sprite/Head
-@onready var spots : Sprite2D = $Sprite/Spots
+@onready var tailSprite : Sprite2D = $Sprite/Tail
+@onready var bodySprite : Sprite2D = $Sprite/Body
+@onready var headSprite : Sprite2D = $Sprite/Head
+@onready var spotsSprite : Sprite2D = $Sprite/Spots
 
 func _ready() -> void:
 	update_visuals()
 
 func _physics_process(_delta: float) -> void:
-	look_at(player.global_position)
-	
+	if $PerceptionArea2D.overlaps_body(player):		
+		if randi_range(1,50) == 1:
+			look_at(player.global_position)
+			
 	#TODO: movement behaviour here
 
 	move_and_slide()
 	
 func update_visuals() -> void:
-	tail.modulate = tailColor
-	body.modulate = bodyColor
-	head.modulate = headColor
-	spots.modulate = spotsColor
+	tailSprite.modulate = tailColor
+	bodySprite.modulate = bodyColor
+	headSprite.modulate = headColor
+	spotsSprite.modulate = spotsColor
+
+
+func _on_perception_area_2d_body_entered(body: Node2D) -> void:
+	print(name + " perceived " + body.name)
+
+
+func _on_perception_area_2d_body_exited(body: Node2D) -> void:
+	print(name + " stopped perceiving " + body.name)

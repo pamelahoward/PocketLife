@@ -15,9 +15,9 @@ const SPEED : int = 2000
 @export var clothesColor : Color = Color.WHITE
 @export var hairColor : Color = Color.WHITE
 
-@onready var body : Sprite2D = $Sprite/Body
-@onready var clothes : Sprite2D = $Sprite/Clothes
-@onready var hair : Sprite2D = $Sprite/Hair
+@onready var bodySprite : Sprite2D = $Sprite/Body
+@onready var clothesSprite : Sprite2D = $Sprite/Clothes
+@onready var hairSprite : Sprite2D = $Sprite/Hair
 
 var target_position : Vector2 = Vector2.ZERO
 
@@ -41,9 +41,9 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 func update_visuals() -> void:
-	body.modulate = bodyColor
-	clothes.modulate = clothesColor
-	hair.modulate = hairColor
+	bodySprite.modulate = bodyColor
+	clothesSprite.modulate = clothesColor
+	hairSprite.modulate = hairColor
 	
 	scale = Vector2.ONE * lilScale
 	
