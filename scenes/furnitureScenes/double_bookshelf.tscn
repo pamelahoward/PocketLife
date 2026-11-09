@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://buwkgery36m64"]
+
+[ext_resource type="PackedScene" uid="uid://b16d8drwev42p" path="res://scenes/furnitureScenes/bookshelf.tscn" id="1_qwb03"]
+[ext_resource type="Texture2D" uid="uid://c0t06a3diyeo2" path="res://sprites/doublebookshelf1.png" id="2_71urv"]
+[ext_resource type="Texture2D" uid="uid://c6mijctkieggu" path="res://sprites/doublebookshelf2.png" id="3_4nidr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ei14y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_71urv")
+}],
+"loop": 1,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4nidr")
+}],
+"loop": 1,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qm3tc"]
+size = Vector2(24, 18)
+
+[node name="Double Bookshelf" unique_id=2017213117 instance=ExtResource("1_qwb03")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=515215959]
+sprite_frames = SubResource("SpriteFrames_ei14y")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1327042582]
+shape = SubResource("RectangleShape2D_qm3tc")

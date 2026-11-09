@@ -29,7 +29,7 @@ size = Vector2(24, 10)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=515215959]
 sprite_frames = SubResource("SpriteFrames_8mwwx")
-animation = &"empty"
+animation = &"full"
 autoplay = "empty"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1327042582]
