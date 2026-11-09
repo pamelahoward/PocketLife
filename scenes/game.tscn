@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b5048ra4i00up" path="res://scenes/dog.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://biex6nwcdp1a5" path="res://scenes/lil.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bj2qsks08pgu4" path="res://scenes/sign.tscn" id="8_gee14"]
+[ext_resource type="PackedScene" uid="uid://b16d8drwev42p" path="res://scenes/furnitureScenes/bookshelf.tscn" id="11_kvpfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbex8"]
 size = Vector2(2048, 3040)
@@ -258,5 +259,91 @@ signString = "Campsite"
 [node name="WaterfrontSign" parent="Signs" unique_id=1550534673 instance=ExtResource("8_gee14")]
 position = Vector2(912, 2831)
 signString = "Waterfront"
+
+[node name="Bookshelves" type="Node2D" parent="." unique_id=1608183711]
+
+[node name="Bookshelf" parent="Bookshelves" unique_id=2017213117 instance=ExtResource("11_kvpfn")]
+position = Vector2(976, 2443)
+rotation = -3.1415925
+
+[node name="Bookshelf2" parent="Bookshelves" unique_id=1539778921 instance=ExtResource("11_kvpfn")]
+position = Vector2(1008, 2443)
+rotation = -3.1415925
+
+[node name="Bookshelf3" parent="Bookshelves" unique_id=1136205190 instance=ExtResource("11_kvpfn")]
+position = Vector2(1040, 2443)
+rotation = -3.1415925
+
+[node name="Bookshelf4" parent="Bookshelves" unique_id=624702906 instance=ExtResource("11_kvpfn")]
+position = Vector2(976, 2453)
+
+[node name="Bookshelf5" parent="Bookshelves" unique_id=1217023653 instance=ExtResource("11_kvpfn")]
+position = Vector2(1008, 2453)
+
+[node name="Bookshelf6" parent="Bookshelves" unique_id=1437383361 instance=ExtResource("11_kvpfn")]
+position = Vector2(1040, 2453)
+
+[node name="Bookshelf7" parent="Bookshelves" unique_id=570643548 instance=ExtResource("11_kvpfn")]
+position = Vector2(1104, 2443)
+rotation = -3.1415925
+
+[node name="Bookshelf8" parent="Bookshelves" unique_id=338766677 instance=ExtResource("11_kvpfn")]
+position = Vector2(1136, 2443)
+rotation = -3.1415925
+
+[node name="Bookshelf9" parent="Bookshelves" unique_id=1154834399 instance=ExtResource("11_kvpfn")]
+position = Vector2(1168, 2443)
+rotation = -3.1415925
+
+[node name="Bookshelf10" parent="Bookshelves" unique_id=309183164 instance=ExtResource("11_kvpfn")]
+position = Vector2(1104, 2453)
+
+[node name="Bookshelf11" parent="Bookshelves" unique_id=1351816271 instance=ExtResource("11_kvpfn")]
+position = Vector2(1136, 2453)
+
+[node name="Bookshelf12" parent="Bookshelves" unique_id=1272921216 instance=ExtResource("11_kvpfn")]
+position = Vector2(1168, 2453)
+
+[node name="Bookshelf13" parent="Bookshelves" unique_id=133395589 instance=ExtResource("11_kvpfn")]
+position = Vector2(976, 2507)
+rotation = -3.1415925
+
+[node name="Bookshelf14" parent="Bookshelves" unique_id=319762143 instance=ExtResource("11_kvpfn")]
+position = Vector2(1008, 2507)
+rotation = -3.1415925
+
+[node name="Bookshelf15" parent="Bookshelves" unique_id=2098539364 instance=ExtResource("11_kvpfn")]
+position = Vector2(1040, 2507)
+rotation = -3.1415925
+
+[node name="Bookshelf16" parent="Bookshelves" unique_id=1310930800 instance=ExtResource("11_kvpfn")]
+position = Vector2(976, 2517)
+
+[node name="Bookshelf17" parent="Bookshelves" unique_id=1259566215 instance=ExtResource("11_kvpfn")]
+position = Vector2(1008, 2517)
+
+[node name="Bookshelf18" parent="Bookshelves" unique_id=653876945 instance=ExtResource("11_kvpfn")]
+position = Vector2(1040, 2517)
+
+[node name="Bookshelf19" parent="Bookshelves" unique_id=261217311 instance=ExtResource("11_kvpfn")]
+position = Vector2(1104, 2507)
+rotation = -3.1415925
+
+[node name="Bookshelf20" parent="Bookshelves" unique_id=1400173896 instance=ExtResource("11_kvpfn")]
+position = Vector2(1136, 2507)
+rotation = -3.1415925
+
+[node name="Bookshelf21" parent="Bookshelves" unique_id=273318263 instance=ExtResource("11_kvpfn")]
+position = Vector2(1168, 2507)
+rotation = -3.1415925
+
+[node name="Bookshelf22" parent="Bookshelves" unique_id=993835207 instance=ExtResource("11_kvpfn")]
+position = Vector2(1104, 2517)
+
+[node name="Bookshelf23" parent="Bookshelves" unique_id=2143364608 instance=ExtResource("11_kvpfn")]
+position = Vector2(1136, 2517)
+
+[node name="Bookshelf24" parent="Bookshelves" unique_id=1696167949 instance=ExtResource("11_kvpfn")]
+position = Vector2(1168, 2517)
 
 [connection signal="timeout" from="Camera/RepositionTimer" to="Camera" method="_on_reposition_timer_timeout"]

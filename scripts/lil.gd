@@ -28,6 +28,10 @@ func _ready() -> void:
 		update_visuals()
 
 func _physics_process(_delta: float) -> void:
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		print(name + " collided with " + collision.get_collider().name)
+	
 	if $PerceptionArea2D.overlaps_body(player):		
 		if randi_range(1,100) == 1:
 			look_at(player.global_position)
@@ -59,8 +63,8 @@ func is_default_visuals() -> bool:
 
 
 func _on_perception_area_2d_body_entered(body: Node2D) -> void:
-	print("Perceived " + body.name)
+	print(name + " perceived " + body.name)
 
 
 func _on_perception_area_2d_body_exited(body: Node2D) -> void:
-	print("Stopped perceiving " + body.name)
+	print(name + " stopped perceiving " + body.name)
