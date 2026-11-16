@@ -16,6 +16,7 @@ var speed : int = defaultSpeed
 
 func _ready() -> void:
 	update_visuals()
+	save_visuals()
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -45,5 +46,18 @@ func randomize_visuals() -> void:
 	bodyColor = GlobalResources.bodyColors.pick_random()
 	clothesColor = Color.from_hsv(randf_range(0.0,1.0), randf_range(0.1,0.9), randf_range(0.1,0.9))
 	hairColor = GlobalResources.hairColors.pick_random()
+	
+	save_visuals()
+	update_visuals()
+
+func save_visuals() -> void:
+	GlobalResources.playerBodyColor = bodyColor
+	GlobalResources.playerClothesColor = clothesColor
+	GlobalResources.playerHairColor = hairColor
+
+func load_visuals() -> void:
+	bodyColor = GlobalResources.playerBodyColor
+	clothesColor = GlobalResources.playerClothesColor
+	hairColor = GlobalResources.playerHairColor
 	
 	update_visuals()

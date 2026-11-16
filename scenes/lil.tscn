@@ -8,6 +8,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
 radius = 8.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mwwx"]
+size = Vector2(512, 512)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_vtaks"]
 radius = 64.0
 
@@ -32,6 +35,12 @@ shape = SubResource("CircleShape2D_8mwwx")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
 target_position = Vector2(32, 0)
+
+[node name="RoamArea2D" type="Area2D" parent="." unique_id=1415878778]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RoamArea2D" unique_id=828448046]
+shape = SubResource("RectangleShape2D_8mwwx")
+debug_color = Color(0.7, 0.7, 0, 0.41960785)
 
 [node name="PerceptionArea2D" type="Area2D" parent="." unique_id=1965243143]
 

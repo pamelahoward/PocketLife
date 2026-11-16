@@ -39,6 +39,9 @@ func _physics_process(_delta: float) -> void:
 	#TODO: movement behaviour here
 
 	move_and_slide()
+
+func rand_roam_point() -> Vector2:
+	return Vector2.ZERO
 	
 func update_visuals() -> void:
 	bodySprite.modulate = bodyColor
