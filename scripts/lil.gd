@@ -8,6 +8,8 @@ extends CharacterBody2D
 
 
 const SPEED : int = 2000
+var defaultNoticeRate : int = 1000
+var noticeRate : int = defaultNoticeRate
 
 @export_range(0.5, 1.0, 0.05) var lilScale : float = 1.0
 
@@ -21,6 +23,8 @@ const SPEED : int = 2000
 
 var target_position : Vector2 = Vector2.ZERO
 
+var lastPerceived : Node2D
+
 func _ready() -> void:
 	if is_default_visuals():
 		randomize_visuals()
@@ -30,11 +34,18 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
+		lastPerceived = collision.get_collider()
 		print(name + " collided with " + collision.get_collider().name)
 	
-	if $PerceptionArea2D.overlaps_body(player):		
-		if randi_range(1,100) == 1:
-			look_at(player.global_position)
+	if get_slide_collision_count():
+		noticeRate = 5
+	else:
+		noticeRate = defaultNoticeRate
+	
+	if lastPerceived:
+		if $PerceptionArea2D.overlaps_body(lastPerceived):		
+			if randi_range(1,noticeRate) == 1:
+				look_at(lastPerceived.global_position)
 	
 	#TODO: movement behaviour here
 
@@ -67,7 +78,11 @@ func is_default_visuals() -> bool:
 
 func _on_perception_area_2d_body_entered(body: Node2D) -> void:
 	print(name + " perceived " + body.name)
+	#if body is CharacterBody2D and body != self: #NOTE: does it matter if its catching itself?
+	if body is CharacterBody2D:
+		lastPerceived = body
 
 
 func _on_perception_area_2d_body_exited(body: Node2D) -> void:
 	print(name + " stopped perceiving " + body.name)
+	lastPerceived = null

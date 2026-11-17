@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://di2lfvrv4y0k5"]
+
+[ext_resource type="Script" uid="uid://cvo4i52i0t8dy" path="res://scripts/testy.gd" id="1_j2chr"]
+[ext_resource type="Texture2D" uid="uid://dtupdfbcpsgxr" path="res://icon.svg" id="1_kmu13"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbex8"]
+radius = 6.4
+
+[node name="Testy" type="CharacterBody2D" unique_id=278568193]
+motion_mode = 1
+script = ExtResource("1_j2chr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1139980785]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_kmu13")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1884193471]
+shape = SubResource("CircleShape2D_pbex8")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=564749136]
+avoidance_enabled = true
+debug_enabled = true

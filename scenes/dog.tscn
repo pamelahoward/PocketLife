@@ -42,5 +42,8 @@ target_position = Vector2(32, 0)
 position = Vector2(80, -3)
 shape = SubResource("CircleShape2D_tpbal")
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1984286746]
+debug_enabled = true
+
 [connection signal="body_entered" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_entered"]
 [connection signal="body_exited" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_exited"]
