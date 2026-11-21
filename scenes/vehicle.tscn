@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cbhruanxhn55g"]
+
+[ext_resource type="Texture2D" uid="uid://dh1wubmh0q6ec" path="res://sprites/spr_car/c3d62a3b-bd39-4ae9-86a4-72fa78877d40.png" id="1_d0fkt"]
+[ext_resource type="Script" uid="uid://crqnbtwsro666" path="res://scripts/vehicle.gd" id="1_tvtne"]
+[ext_resource type="Texture2D" uid="uid://ckss3dnsxevmi" path="res://sprites/spr_car/60cdbad4-2338-40c1-9ccc-1f40e23bb220.png" id="2_tvtne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbex8"]
+size = Vector2(30, 18)
+
+[node name="Vehicle" type="StaticBody2D" unique_id=1876407489]
+script = ExtResource("1_tvtne")
+
+[node name="Main" type="Sprite2D" parent="." unique_id=1560242395]
+unique_name_in_owner = true
+texture = ExtResource("1_d0fkt")
+
+[node name="Parts" type="Sprite2D" parent="." unique_id=1172297733]
+texture = ExtResource("2_tvtne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=208628560]
+shape = SubResource("RectangleShape2D_pbex8")

@@ -5,7 +5,8 @@
 - Game Screen
 	- Recreate NPC movement and behaviour
 	- Create vehicle paths and behaviour
-	- Flower particles
+		- make buses and bikes extend car but with more/different behaviours
+	- Flower particles (idk how to do this)
 	- Time of Day
 	- Gold spawning and collection
 	- Save/Load position, gold and time of day

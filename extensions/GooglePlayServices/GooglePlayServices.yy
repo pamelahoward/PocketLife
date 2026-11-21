@@ -1,5 +1,5 @@
 {
-  "$GMExtension":"",
+  "$GMExtension":"v1",
   "%Name":"GooglePlayServices",
   "androidactivityinject":"",
   "androidclassname":"YYGooglePlayServices",
@@ -74,8 +74,10 @@
   "iosSystemFrameworkEntries":[],
   "iosThirdPartyFrameworkEntries":[],
   "license":"",
+  "maccodeinjection":"",
   "maccompilerflags":"",
   "maclinkerflags":"",
+  "macProps":false,
   "macsourcedir":"",
   "name":"GooglePlayServices",
   "options":[

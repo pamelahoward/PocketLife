@@ -5,6 +5,10 @@ var movement_speed := 100.0
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
+func _ready() -> void:
+	#navigation_agent.set_pathfinding_algorithm(NavigationPathQueryParameters2D.PATHFINDING_ALGORITHM_ASTAR)
+	pass
+
 func set_movement_target(movement_target: Vector2) -> void:
 	navigation_agent.target_position = movement_target
 
