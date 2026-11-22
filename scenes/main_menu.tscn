@@ -37,9 +37,11 @@ layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=535186354]
+[node name="CenterContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=1828517308]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_bottom = 64
 
 [node name="Player" parent="VBoxContainer/HBoxContainer/CustomizeControls/CenterContainer" unique_id=1913736434 instance=ExtResource("2_ekxnf")]
 unique_name_in_owner = true

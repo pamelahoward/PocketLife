@@ -2,7 +2,6 @@ class_name Lil
 extends CharacterBody2D
 
 @onready var player : Player = get_tree().get_first_node_in_group("Player")
-#var perceivedPlayer : bool = false
 @onready var game : Node2D = get_tree().get_first_node_in_group("Game")
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
@@ -36,7 +35,7 @@ func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		lastPerceived = collision.get_collider()
-		print(name + " collided with " + collision.get_collider().name)
+		#print_debug(name + " collided with " + collision.get_collider().name)
 	
 	if get_slide_collision_count():
 		noticeRate = 5
@@ -91,14 +90,14 @@ func is_default_visuals() -> bool:
 
 
 func _on_perception_area_2d_body_entered(body: Node2D) -> void:
-	print(name + " perceived " + body.name)
+	#print_debug(name + " perceived " + body.name)
 	#if body is CharacterBody2D and body != self: #NOTE: does it matter if its catching itself?
 	if body is CharacterBody2D:
 		lastPerceived = body
 
 
 func _on_perception_area_2d_body_exited(body: Node2D) -> void:
-	print(name + " stopped perceiving " + body.name)
+	#print_debug(name + " stopped perceiving " + body.name)
 	lastPerceived = null
 
 

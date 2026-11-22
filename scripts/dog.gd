@@ -54,8 +54,10 @@ func update_visuals() -> void:
 
 
 func _on_perception_area_2d_body_entered(body: Node2D) -> void:
-	print(name + " perceived " + body.name)
+	#print_debug(name + " perceived " + body.name)
+	pass
 
 
 func _on_perception_area_2d_body_exited(body: Node2D) -> void:
-	print(name + " stopped perceiving " + body.name)
+	#print_debug(name + " stopped perceiving " + body.name)
+	pass
