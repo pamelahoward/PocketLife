@@ -5,9 +5,15 @@ extends MarginContainer
 
 func _ready() -> void:
 	versionLabel.text = "v" + ProjectSettings.get_setting("application/config/version")
+	$VBoxContainer/HBoxContainer/CustomizeControls/BodyColorPickerButton.color = player.bodyColor
+	$VBoxContainer/HBoxContainer/CustomizeControls/ClothesColorPickerButton.color = player.clothesColor
+	$VBoxContainer/HBoxContainer/CustomizeControls/HairColorPickerButton.color = player.hairColor
 
 func _on_randomize_button_pressed() -> void:
 	player.randomize_visuals()
+	$VBoxContainer/HBoxContainer/CustomizeControls/BodyColorPickerButton.color = player.bodyColor
+	$VBoxContainer/HBoxContainer/CustomizeControls/ClothesColorPickerButton.color = player.clothesColor
+	$VBoxContainer/HBoxContainer/CustomizeControls/HairColorPickerButton.color = player.hairColor
 
 #region Menu Buttons
 func _on_new_game_button_pressed() -> void:
@@ -30,3 +36,18 @@ func _on_new_game_button_pressed() -> void:
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
 #endregion
+
+
+func _on_body_color_picker_button_color_changed(color: Color) -> void:
+	player.bodyColor = color
+	player.update_visuals()
+
+
+func _on_clothes_color_picker_button_color_changed(color: Color) -> void:
+	player.clothesColor = color
+	player.update_visuals()
+
+
+func _on_hair_color_picker_button_color_changed(color: Color) -> void:
+	player.hairColor = color
+	player.update_visuals()

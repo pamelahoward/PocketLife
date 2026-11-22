@@ -11,7 +11,7 @@ radius = 8.0
 [node name="Player" type="CharacterBody2D" unique_id=1913736434 groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_dqkch")
-bodyColor = Color(0.9605107, 0.88714474, 0.85411155, 1)
+bodyColor = Color(0.96862745, 0.9137255, 0.85882354, 1)
 clothesColor = Color(1, 0.5921569, 0.07058824, 1)
 hairColor = Color(0.6578299, 0.53930134, 0.4634781, 1)
 

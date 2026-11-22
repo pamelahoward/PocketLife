@@ -40,6 +40,10 @@ position = Vector2(32, 0)
 shape = SubResource("CircleShape2D_vtaks")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1070762282]
+avoidance_enabled = true
+radius = 16.0
+neighbor_distance = 128.0
+debug_enabled = true
 
 [node name="ThoughtTimer" type="Timer" parent="." unique_id=1682816795]
 wait_time = 5.0

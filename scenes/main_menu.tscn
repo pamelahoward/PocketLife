@@ -51,6 +51,25 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Randomize"
 
+[node name="BodyColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=918401896]
+layout_mode = 2
+text = "Body"
+edit_alpha = false
+edit_intensity = false
+
+[node name="ClothesColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=567164709]
+layout_mode = 2
+text = "Clothes"
+edit_alpha = false
+edit_intensity = false
+
+[node name="HairColorPickerButton" type="ColorPickerButton" parent="VBoxContainer/HBoxContainer/CustomizeControls" unique_id=2044660886]
+layout_mode = 2
+text = "Hair
+"
+edit_alpha = false
+edit_intensity = false
+
 [node name="MenuButtons" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=67971752]
 layout_mode = 2
 size_flags_horizontal = 6
@@ -86,5 +105,8 @@ size_flags_vertical = 8
 text = "v1.0.0.0"
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CustomizeControls/RandomizeButton" to="." method="_on_randomize_button_pressed"]
+[connection signal="color_changed" from="VBoxContainer/HBoxContainer/CustomizeControls/BodyColorPickerButton" to="." method="_on_body_color_picker_button_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/HBoxContainer/CustomizeControls/ClothesColorPickerButton" to="." method="_on_clothes_color_picker_button_color_changed"]
+[connection signal="color_changed" from="VBoxContainer/HBoxContainer/CustomizeControls/HairColorPickerButton" to="." method="_on_hair_color_picker_button_color_changed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/MenuButtons/NewGameButton" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/MenuButtons/QuitButton" to="." method="_on_quit_button_pressed"]
