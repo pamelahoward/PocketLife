@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bt1wnhjmejbav" path="res://sprites/spr_dog/dogSpots.png" id="5_ei5el"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
-radius = 16.0
+radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tpbal"]
 radius = 128.0

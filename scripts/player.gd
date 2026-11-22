@@ -16,7 +16,6 @@ var speed : int = defaultSpeed
 
 func _ready() -> void:
 	update_visuals()
-	save_visuals()
 
 func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())

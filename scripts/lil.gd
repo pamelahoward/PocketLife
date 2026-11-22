@@ -4,10 +4,11 @@ extends CharacterBody2D
 @onready var player : Player = get_tree().get_first_node_in_group("Player")
 #var perceivedPlayer : bool = false
 @onready var game : Node2D = get_tree().get_first_node_in_group("Game")
-#@onready var navMap = game.collisionTileMap.get_navigation_map()
+
+@onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
 
-const SPEED : int = 2000
+@export var SPEED : int = randi_range(2000, 7000)
 var defaultNoticeRate : int = 1000
 var noticeRate : int = defaultNoticeRate
 
@@ -31,7 +32,7 @@ func _ready() -> void:
 	else:
 		update_visuals()
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		lastPerceived = collision.get_collider()
@@ -47,12 +48,25 @@ func _physics_process(_delta: float) -> void:
 			if randi_range(1,noticeRate) == 1:
 				look_at(lastPerceived.global_position)
 	
-	#TODO: movement behaviour here
-
+	if navigation_agent.is_navigation_finished(): return
+	
+	var current_agent_position : Vector2 = global_position
+	var next_path_position : Vector2 = navigation_agent.get_next_path_position()
+	
+	look_at(next_path_position)
+	
+	velocity = current_agent_position.direction_to(next_path_position) * SPEED * delta
 	move_and_slide()
 
-func rand_roam_point() -> Vector2:
-	return Vector2.ZERO
+func set_movement_target(movement_target: Vector2) -> void:
+	navigation_agent.target_position = movement_target
+	
+func set_random_target() -> void:
+	var randomTarget : Vector2 = Vector2(randi_range(game.topLeft.x, game.bottomRight.x) * 32,randi_range(game.topLeft.y, game.bottomRight.y) * 32)
+	set_movement_target(randomTarget)
+	
+#func rand_roam_point() -> Vector2:
+	#return Vector2.ZERO
 	
 func update_visuals() -> void:
 	bodySprite.modulate = bodyColor
@@ -86,3 +100,7 @@ func _on_perception_area_2d_body_entered(body: Node2D) -> void:
 func _on_perception_area_2d_body_exited(body: Node2D) -> void:
 	print(name + " stopped perceiving " + body.name)
 	lastPerceived = null
+
+
+func _on_thought_timer_timeout() -> void:
+	set_random_target()

@@ -11,6 +11,7 @@ func _on_randomize_button_pressed() -> void:
 
 #region Menu Buttons
 func _on_new_game_button_pressed() -> void:
+	player.save_visuals()
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 

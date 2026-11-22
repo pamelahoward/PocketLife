@@ -34,14 +34,17 @@ shape = SubResource("CircleShape2D_8mwwx")
 target_position = Vector2(32, 0)
 
 [node name="PerceptionArea2D" type="Area2D" parent="." unique_id=1965243143]
-visible = false
 
 [node name="PerceptionShape2D" type="CollisionShape2D" parent="PerceptionArea2D" unique_id=239064696]
 position = Vector2(32, 0)
 shape = SubResource("CircleShape2D_vtaks")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1070762282]
-path_postprocessing = 1
+
+[node name="ThoughtTimer" type="Timer" parent="." unique_id=1682816795]
+wait_time = 5.0
+autostart = true
 
 [connection signal="body_entered" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_entered"]
 [connection signal="body_exited" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_exited"]
+[connection signal="timeout" from="ThoughtTimer" to="." method="_on_thought_timer_timeout"]
