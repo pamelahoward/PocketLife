@@ -8,3 +8,5 @@ extends Node
 @export var playerHairColor : Color = Color.WHITE
 
 @export var lilExclamations : Array[String]
+
+var coins : int = 100

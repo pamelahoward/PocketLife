@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbex8"]
 size = Vector2(30, 18)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
+radius = 32.0
+
 [node name="Vehicle" type="StaticBody2D" unique_id=1876407489]
 script = ExtResource("1_tvtne")
 
@@ -19,3 +22,10 @@ texture = ExtResource("2_tvtne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=208628560]
 shape = SubResource("RectangleShape2D_pbex8")
+
+[node name="PerceptionArea2D" type="Area2D" parent="." unique_id=1014725671]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerceptionArea2D" unique_id=2020694137]
+position = Vector2(24, 0)
+shape = SubResource("CircleShape2D_8mwwx")
+debug_color = Color(0.7, 0.7, 0, 0.41960785)

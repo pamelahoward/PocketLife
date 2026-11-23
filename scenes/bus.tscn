@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8154j"]
 size = Vector2(30, 22)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mwwx"]
+size = Vector2(60, 22)
+
 [node name="Bus" unique_id=1876407489 instance=ExtResource("1_t7ha2")]
 script = ExtResource("2_stnsb")
 
@@ -18,3 +21,10 @@ visible = false
 
 [node name="CollisionShape2D" parent="." index="2" unique_id=208628560]
 shape = SubResource("RectangleShape2D_8154j")
+
+[node name="BoardingArea2D" type="Area2D" parent="." index="3" unique_id=151908736]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardingArea2D" index="0" unique_id=2097301913]
+position = Vector2(-7.5, -22)
+shape = SubResource("RectangleShape2D_8mwwx")
+debug_color = Color(0.7, 0.7, 0, 0.41960785)

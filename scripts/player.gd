@@ -35,7 +35,11 @@ func _physics_process(delta: float) -> void:
 			velocity = Vector2.ZERO
 
 		move_and_slide()
-	
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("teleport"):
+		global_position = get_global_mouse_position()
+
 func update_visuals() -> void:
 	body.modulate = bodyColor
 	clothes.modulate = clothesColor

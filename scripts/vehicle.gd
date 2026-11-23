@@ -9,6 +9,8 @@ extends StaticBody2D
 @export var speed : int = randi_range(3,8)
 @export var color : Color = Color.from_hsv(randf_range(0.0,1.0),randf_range(0.0,1.0),randf_range(0.0,1.0))
 
+@export var lastPerceived : CharacterBody2D
+
 func _ready() -> void:
 	main.modulate = color
 
@@ -16,3 +18,10 @@ func _process(_delta: float) -> void:
 	if path.progress_ratio < 1:
 		path.progress_ratio += 0.00001 * speed
 	else: path.progress_ratio = 0
+	
+	if $PerceptionArea2D.has_overlapping_bodies():
+		var bodies : Array[Node2D] = $PerceptionArea2D.get_overlapping_bodies()
+		for body in bodies:
+			if body is Player or body is Lil:
+				lastPerceived = body
+		#TODO: if lastPerceived (exists), set the speed to be speed*distance_to_lastPerceived (clamping at speed so it cant multiply over, but should multiply down to 0)

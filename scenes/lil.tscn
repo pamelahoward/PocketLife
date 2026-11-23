@@ -38,6 +38,7 @@ target_position = Vector2(32, 0)
 [node name="PerceptionShape2D" type="CollisionShape2D" parent="PerceptionArea2D" unique_id=239064696]
 position = Vector2(32, 0)
 shape = SubResource("CircleShape2D_vtaks")
+debug_color = Color(0.7, 0.7, 0, 0.41960785)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1070762282]
 avoidance_enabled = true

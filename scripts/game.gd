@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var player : Player = %Player
+@onready var ui : MarginContainer = %UI
 @onready var camera : Camera2D = %Camera
 @onready var collisionTileMap : TileMapLayer = %TileMapCollisions
 
@@ -13,8 +14,14 @@ extends Node2D
 func _ready() -> void:
 	player.load_visuals()
 	player.enabled = true
+	update_UI()
 	camera.reattach(player)
+	
+	_on_populate_timer_timeout()
+	
 
+func update_UI() -> void:
+	$CanvasLayer/UI/CoinLabel.text = "Coins: %s" % GlobalResources.coins
 
 func _on_populate_timer_timeout() -> void:
 	pass
@@ -24,10 +31,10 @@ func _on_populate_timer_timeout() -> void:
 		print("too many coins to attempt spawning more")
 		return
 	
+	@warning_ignore("narrowing_conversion")
 	var randomPoint : Vector2 = Vector2(randi_range(topLeft.x, bottomRight.x) * cellsize, randi_range(topLeft.y, bottomRight.y) * cellsize)
 	var newCoin : Coin = coinScene.instantiate()
 	newCoin.global_position = randomPoint
 	add_child(newCoin)
-	print("spawning new coin at " + str(randomPoint))
 	
 	#TODO: repopulate supermarket shelves, bookshelves

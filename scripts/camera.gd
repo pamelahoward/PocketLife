@@ -19,10 +19,12 @@ func reattach(node) -> void:
 func _input(event: InputEvent) -> void:
 	if event.is_action_released("idle"):
 		if idle:
+			player.enabled = true
 			reattach(player)
 			idle = false
 			$RepositionTimer.stop()
 		else:
+			player.enabled = false
 			reattach(game)
 			idle = true
 			$RepositionTimer.start()
@@ -30,7 +32,6 @@ func _input(event: InputEvent) -> void:
 
 func _on_reposition_timer_timeout() -> void:
 	if idle and get_parent() == game:
-		#TODO: get random position in room and set camera's global_position
-		
-		print("moving to random position")
+		var randomPoint : Vector2 = Vector2(randi_range(game.topLeft.x, game.bottomRight.x) * game.cellsize,randi_range(game.topLeft.y, game.bottomRight.y) * game.cellsize)
+		global_position = randomPoint
 		

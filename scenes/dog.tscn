@@ -1,49 +1,40 @@
-[gd_scene format=3 uid="uid://b5048ra4i00up"]
+[gd_scene format=3 uid="uid://c5bpa4j3ofvci"]
 
-[ext_resource type="Script" uid="uid://beq4jnknraxqn" path="res://scripts/dog.gd" id="1_tpbal"]
+[ext_resource type="PackedScene" uid="uid://biex6nwcdp1a5" path="res://scenes/lil.tscn" id="1_on80e"]
+[ext_resource type="Script" uid="uid://is3fog1rkbcr" path="res://scripts/dog.gd" id="1_tpbal"]
 [ext_resource type="Texture2D" uid="uid://myy5ghrj1bna" path="res://sprites/spr_dog/dogTail.png" id="2_iaoh4"]
 [ext_resource type="Texture2D" uid="uid://uiid5ia5hscu" path="res://sprites/spr_dog/dogBody.png" id="3_i2xh6"]
 [ext_resource type="Texture2D" uid="uid://d26yvc5uyql4v" path="res://sprites/spr_dog/dogHead.png" id="4_laypt"]
 [ext_resource type="Texture2D" uid="uid://bt1wnhjmejbav" path="res://sprites/spr_dog/dogSpots.png" id="5_ei5el"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mwwx"]
-radius = 8.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_tpbal"]
 radius = 128.0
 
-[node name="Dog" type="CharacterBody2D" unique_id=1913736434]
-motion_mode = 1
+[node name="Dog" unique_id=1913736434 instance=ExtResource("1_on80e")]
 script = ExtResource("1_tpbal")
 
-[node name="Sprite" type="Node2D" parent="." unique_id=1386677373]
-
-[node name="Tail" type="Sprite2D" parent="Sprite" unique_id=1717120141]
+[node name="Tail" type="Sprite2D" parent="Sprite" parent_id_path=PackedInt32Array(1386677373) index="0" unique_id=2133384308]
+modulate = Color(0.7176471, 0.4862745, 0.40392157, 1)
 texture = ExtResource("2_iaoh4")
 
-[node name="Body" type="Sprite2D" parent="Sprite" unique_id=517145373]
+[node name="Body" parent="Sprite" parent_id_path=PackedInt32Array(1386677373) index="1" unique_id=517145373]
+modulate = Color(0.7176471, 0.4862745, 0.40392157, 1)
 texture = ExtResource("3_i2xh6")
 
-[node name="Head" type="Sprite2D" parent="Sprite" unique_id=942247810]
+[node name="Head" type="Sprite2D" parent="Sprite" parent_id_path=PackedInt32Array(1386677373) index="2" unique_id=195381787]
+modulate = Color(0.7176471, 0.4862745, 0.40392157, 1)
 texture = ExtResource("4_laypt")
 
-[node name="Spots" type="Sprite2D" parent="Sprite" unique_id=461895736]
+[node name="Spots" type="Sprite2D" parent="Sprite" parent_id_path=PackedInt32Array(1386677373) index="3" unique_id=46389412]
+modulate = Color(0.4392157, 0.21176471, 0.1882353, 1)
 texture = ExtResource("5_ei5el")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116205352]
+[node name="Clothes" parent="Sprite" parent_id_path=PackedInt32Array(1386677373) index="4" unique_id=1717120141]
+visible = false
+
+[node name="Hair" parent="Sprite" parent_id_path=PackedInt32Array(1386677373) index="5" unique_id=942247810]
+visible = false
+
+[node name="PerceptionShape2D" parent="PerceptionArea2D" parent_id_path=PackedInt32Array(1965243143) index="0" unique_id=239064696]
+position = Vector2(80, 0)
 shape = SubResource("CircleShape2D_8mwwx")
-
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2091760680]
-target_position = Vector2(32, 0)
-
-[node name="PerceptionArea2D" type="Area2D" parent="." unique_id=1592550545]
-
-[node name="PerceptionShape2D" type="CollisionShape2D" parent="PerceptionArea2D" unique_id=1680376964]
-position = Vector2(80, -3)
-shape = SubResource("CircleShape2D_tpbal")
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1984286746]
-debug_enabled = true
-
-[connection signal="body_entered" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_entered"]
-[connection signal="body_exited" from="PerceptionArea2D" to="." method="_on_perception_area_2d_body_exited"]
