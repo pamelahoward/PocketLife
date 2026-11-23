@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bo04n2sahhq1h"]
+
+[ext_resource type="PackedScene" uid="uid://cbhruanxhn55g" path="res://scenes/vehicle.tscn" id="1_t7ha2"]
+[ext_resource type="Script" uid="uid://bwdsmtkbollsg" path="res://scripts/bus.gd" id="2_stnsb"]
+[ext_resource type="Texture2D" uid="uid://csrthiviu41ah" path="res://sprites/bus.png" id="3_8154j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8154j"]
+size = Vector2(30, 22)
+
+[node name="Bus" unique_id=1876407489 instance=ExtResource("1_t7ha2")]
+script = ExtResource("2_stnsb")
+
+[node name="Main" parent="." index="0" unique_id=1560242395]
+texture = ExtResource("3_8154j")
+
+[node name="Parts" parent="." index="1" unique_id=1172297733]
+visible = false
+
+[node name="CollisionShape2D" parent="." index="2" unique_id=208628560]
+shape = SubResource("RectangleShape2D_8154j")

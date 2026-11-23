@@ -30,6 +30,8 @@ func _ready() -> void:
 		randomize_visuals()
 	else:
 		update_visuals()
+		
+	$ThoughtTimer.emit_signal("timeout")
 
 func _physics_process(delta: float) -> void:
 	for i in get_slide_collision_count():
@@ -61,7 +63,7 @@ func set_movement_target(movement_target: Vector2) -> void:
 	navigation_agent.target_position = movement_target
 	
 func set_random_target() -> void:
-	var randomTarget : Vector2 = Vector2(randi_range(game.topLeft.x, game.bottomRight.x) * 32,randi_range(game.topLeft.y, game.bottomRight.y) * 32)
+	var randomTarget : Vector2 = Vector2(randi_range(game.topLeft.x, game.bottomRight.x) * game.cellsize,randi_range(game.topLeft.y, game.bottomRight.y) * game.cellsize)
 	set_movement_target(randomTarget)
 	
 #func rand_roam_point() -> Vector2:
@@ -103,3 +105,4 @@ func _on_perception_area_2d_body_exited(body: Node2D) -> void:
 
 func _on_thought_timer_timeout() -> void:
 	set_random_target()
+	$ThoughtTimer.wait_time = randf_range(3.0, 15.0)
