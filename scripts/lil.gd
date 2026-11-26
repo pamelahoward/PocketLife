@@ -6,7 +6,6 @@ extends CharacterBody2D
 
 @onready var navigation_agent: NavigationAgent2D = $NavigationAgent2D
 
-
 @export var SPEED : int = randi_range(2000, 7000)
 var defaultNoticeRate : int = 1000
 var noticeRate : int = defaultNoticeRate
@@ -16,6 +15,8 @@ var noticeRate : int = defaultNoticeRate
 @export var bodyColor : Color = Color.WHITE
 @export var clothesColor : Color = Color.WHITE
 @export var hairColor : Color = Color.WHITE
+
+@export var favSpots : Array[Marker2D]
 
 @onready var bodySprite : Sprite2D = $Sprite/Body
 @onready var clothesSprite : Sprite2D = $Sprite/Clothes
@@ -104,5 +105,10 @@ func _on_perception_area_2d_body_exited(body: Node2D) -> void:
 
 
 func _on_thought_timer_timeout() -> void:
-	set_random_target()
-	$ThoughtTimer.wait_time = randf_range(3.0, 15.0)
+	if favSpots:
+		var ranFavSpot : Vector2 = favSpots.pick_random().global_position
+		set_movement_target(ranFavSpot)
+		$ThoughtTimer.wait_time = 60
+	else:
+		set_random_target()
+		$ThoughtTimer.wait_time = randf_range(3.0, 15.0)
