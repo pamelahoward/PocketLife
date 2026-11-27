@@ -41,6 +41,7 @@ shape = SubResource("CircleShape2D_vtaks")
 debug_color = Color(0.7, 0.7, 0, 0.41960785)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1070762282]
+path_postprocessing = 1
 avoidance_enabled = true
 radius = 16.0
 neighbor_distance = 128.0

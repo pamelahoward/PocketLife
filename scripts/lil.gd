@@ -106,9 +106,11 @@ func _on_perception_area_2d_body_exited(body: Node2D) -> void:
 
 func _on_thought_timer_timeout() -> void:
 	if favSpots:
-		var ranFavSpot : Vector2 = favSpots.pick_random().global_position
-		set_movement_target(ranFavSpot)
-		$ThoughtTimer.wait_time = 60
-	else:
-		set_random_target()
-		$ThoughtTimer.wait_time = randf_range(3.0, 15.0)
+		if randi() % 2:
+			var ranFavSpot : Vector2 = favSpots.pick_random().global_position
+			set_movement_target(ranFavSpot)
+			$ThoughtTimer.wait_time = randf_range(12.0, 60.0)
+			return
+	
+	set_random_target()
+	$ThoughtTimer.wait_time = randf_range(3.0, 15.0)

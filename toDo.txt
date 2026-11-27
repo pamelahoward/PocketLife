@@ -1,12 +1,13 @@
 - Main Menu
 	- Animated Title
-	- Customize Avatar
 	
 - Game Screen
-	- Recreate NPC movement and behaviour
+	- Improve NPC movement
+	- Recreate NPC reactions
 	- Create vehicle paths and behaviour
-		- make buses and bikes extend car but with more/different behaviours
+		- make buses and bikes extend car but with more/different behaviours (in progress)
+		- make vehicles auto generate
 	- Flower particles (idk how to do this)
+	- Fish auto spawn and despawn
 	- Time of Day
-	- Gold spawning and collection
 	- Save/Load position, gold and time of day
